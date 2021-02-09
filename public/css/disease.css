@@ -1,4 +1,10 @@
 
+* {
+margin: 0;
+padding: 0;
+}
+
+
 
 #pSec9::-webkit-scrollbar {
   width: 12px;
@@ -129,11 +135,6 @@ text-decoration:none;
 	margin-bottom:1vw;
 }
 
-
-* {
-margin: 0;
-padding: 0;
-}
 #profileBody{
 	margin-top:0vh;
 	display:flex;
@@ -177,23 +178,13 @@ padding: 0;
 	color:white;
 	padding:5%;
 	padding-top:6%;
-	/* border-radius:5px 5px 0px 0px; */
 	font-weight:bold;
 	font-size:140%;
 	font-family: Product Sans;
 }
 
 
-#patientDetails{
-	position:relative;
-	top:12%;
-	left:5.5%;
-	width:88%;
-	height:30%;
-	background-color: #F3F3F3;
-	border-radius:15px;
-	margin-bottom: 2vw;
-}
+
 #heading2{
 	font-size:90%;
 	font-weight:bold;
@@ -247,6 +238,45 @@ padding: 0;
 	border-radius:10px;
 }
 @media screen and (min-width: 0px) and (max-width: 767px) { 
+	#pSec9::-webkit-scrollbar {
+  width: 5px;
+}
+#pSec9 {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+}
+#pSec9::-webkit-scrollbar-track {
+    background: transparent;
+}
+    
+#pSec9::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 191, 209);
+    border-right: none;
+    border-left: none;
+}
+
+#pSec9::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+
+#pSec9::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 8px;
+}
+
 
   #pSec9{
 	overflow-y:scroll ;
@@ -280,6 +310,46 @@ padding: 0;
 /* /____________ Tab view _______________/ */
 @media(max-width:992px)
 {
+
+	#pSec9::-webkit-scrollbar {
+  width: 12px;
+}
+#pSec9 {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar {
+    display: block;
+    width: 12px;
+}
+#pSec9::-webkit-scrollbar-track {
+    background: transparent;
+}
+    
+#pSec9::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 191, 209);
+    border-right: none;
+    border-left: none;
+}
+
+#pSec9::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 20px; 
+}
+
+#pSec9::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 8px;
+}
+
 	 #pSec7{
 		display: none !important;
 		background-color: #FFFFFF;
@@ -319,6 +389,45 @@ padding: 0;
 	
 
 @media (max-width: 576px) {
+	#pSec9::-webkit-scrollbar {
+  width: 5px;
+}
+#pSec9 {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+#pSec9::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+}
+#pSec9::-webkit-scrollbar-track {
+    background: transparent;
+}
+    
+#pSec9::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 191, 209);
+    border-right: none;
+    border-left: none;
+}
+
+#pSec9::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+
+#pSec9::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 8px;
+}
+
 	
 	 #pSec8{
 			display: flex !important;

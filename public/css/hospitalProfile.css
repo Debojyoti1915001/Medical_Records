@@ -462,8 +462,7 @@ text-decoration:none;
 		padding-top: 3%;
 	}
 }
-
-@media(max-width:380px)
+@media only screen and (device-width:384px)
 {
 	#profileImg{
 		left: 8%;
@@ -471,6 +470,95 @@ text-decoration:none;
 
 	#Camera {
 		top: 43.5%;
+		left: 30.5%;
+	}
+
+	#name{
+		top:18%;
+		left: 7.5%;
+	}
+	#heading1{
+		top:16%;
+		left:7.5%;
+	}
+	#patientDetails {
+		top: 17.5%;
+	}
+	#pSec3{
+		top: 58%;
+	}
+	#pSec1{
+	    margin-top: 110px;
+	}
+}
+@media only screen and (device-width:412px)
+{
+	#profileImg{
+		left: 10%;
+	}
+
+	#Camera {
+		top: 43.5%;
+		left: 30.5%;
+	}
+
+	#name{
+		top:18%;
+		left: 7.5%;
+	}
+	#heading1{
+		top:16%;
+		left:7.5%;
+	}
+	#patientDetails {
+		top: 17.5%;
+	}
+	#pSec3{
+		top: 58%;
+	}
+	#pSec1{
+	    margin-top: 110px;
+	}
+}
+@media only screen and (device-width:411px)
+{
+	#profileImg{
+		left: 9%;
+	}
+
+	#Camera {
+		top: 43.5%;
+		left: 30.5%;
+	}
+
+	#name{
+		top:18%;
+		left: 7.5%;
+	}
+	#heading1{
+		top:16%;
+		left:7.5%;
+	}
+	#patientDetails {
+		top: 17.5%;
+	}
+	#pSec3{
+		top: 58%;
+	}
+	#pSec1{
+	    margin-top: 110px;
+	}
+}
+
+@media(max-width:380px)
+{
+	#profileImg{
+		left: 8%;
+		top: 8%;
+	}
+
+	#Camera {
+		top: 42.5%;
 		left: 30.5%;
 	}
 
