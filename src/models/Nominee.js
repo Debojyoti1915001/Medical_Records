@@ -10,7 +10,6 @@ const nomineeSchema = mongoose.Schema(
         phoneNumber: {
             type: String,
             trim: true,
-            validate: [utilities.phoneValidator, 'Phone number is invalid']
             
         },
         email:{

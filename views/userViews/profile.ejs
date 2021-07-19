@@ -70,7 +70,7 @@
 				<form class="form-modal-edit" method="POST">
 					<!--Dont remove the enctype-->
 					<div class="group1">
-						<input type="text" name="nomineeName" aria-required="true" required><span
+						<input type="text" name="nomineeName" ><span
 							class="highlight1"></span><span class="bar1"></span>
 						<label for="name" style="margin-left: 8px; margin-top: -20px; padding-bottom: 200px;">Nominee
 							Name</label>
@@ -78,7 +78,7 @@
 						<!-- Dont remove the name and value attribute-->
 					</div>
 					<div class="group1-edit">
-						<input type="text" name="nomineeEmail" aria-required="true" required><span
+						<input type="text" name="nomineeEmail" ><span
 							class="highlight1"></span><span class="bar1"></span>
 						<label for="name" style="margin-left: 8px; margin-top: -20px; padding-bottom: 200px;">Nominee
 							Email</label>
@@ -86,26 +86,26 @@
 						<!-- Dont remove the name and value attribute-->
 					</div>
 					<div class="group1">
-						<input type="text" name="nomineePhn" aria-required="true" required><span
+						<input type="text" name="nomineePhn" ><span
 							class="highlight1"></span><span class="bar1"></span>
 						<label for="name" style="margin-left: 8px; margin-top: -20px; padding-bottom: 200px;">Nominee
-							Phone Number</label>
+							Phone Number </label>
 
 						<!-- Dont remove the name and value attribute-->
 					</div>
 					<div class="group1">
-						<input type="text" name="address" aria-required="true" required><span
+						<input type="text" name="address" ><span
 							class="highlight1"></span><span class="bar1"></span>
 						<label for="name" style="margin-left: 8px; margin-top: -20px; padding-bottom: 200px;">User
-							Address</label>
+							Address  </label>
 
 						<!-- Dont remove the name and value attribute-->
 					</div>
 					<div class="group1">
-						<input type="text" name="bloodGroup" aria-required="true" required><span
+						<input type="text" name="bloodGroup" ><span
 							class="highlight1"></span><span class="bar1"></span>
 						<label for="name" style="margin-left: 8px; margin-top: -20px; padding-bottom: 200px;">User
-							Blood-Group</label>
+							Blood-Group: </label>
 
 						<!-- Dont remove the name and value attribute-->
 					</div>
@@ -305,10 +305,14 @@
 											<img src="../img/profile-edit-icon.png">
 										</button>
 									</div>
-									<label for="bloodGroup" class="detailLevels">Blood Group : </label>
+									<label for="bloodGroup" class="detailLevels">Blood Group : <%if (user.bloodGroup) { %>
+										<%=user.bloodGroup %>
+										<% } %></label>
 									<!-- <input type="text" class="detailFields" id="bloodGroup"> -->
 									<br>
-									<label for="Address" class="detailLevels">Address : </label>
+									<label for="Address" class="detailLevels">Address :<%if (user.address) { %>
+										<%=user.address %>
+										<% } %> </label>
 									<!-- <input type="text" class="detailFields" id="Address"> -->
 									<br>
 									<label for="PhoneNo" class="detailLevels">Phone No. : <%if (user.phoneNumber) { %>

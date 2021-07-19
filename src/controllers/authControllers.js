@@ -17,21 +17,12 @@ const maxAge = 30 * 24 * 60 * 60
 
 module.exports.editDetails_post=async(req,res)=>{
     try{
-//    console.log("details",req.body)
+    console.log("details",req.body)
     const name =req.body.nomineeName
     const email=req.body.nomineeEmail
     const phoneNumber=req.body.nomineePhn
-    if(!name){
-        name=''
-    }
-    if(!phoneNumber)
-    {
-        phone=''
-    }
-    if(!email)
-    {
-        email=''
-    }
+    // console.log("name,phn,email",name,email,phoneNumber)
+    // console.log("name,phn,email",name,email,phoneNumber)
     
     const address= req.body.address
     const bloodGroup= req.body.bloodGroup
@@ -39,6 +30,7 @@ module.exports.editDetails_post=async(req,res)=>{
     user.address=address
     user.bloodGroup=bloodGroup
     //await user.save()
+    console.log(user)
     let nominee = await new Nominee({ 
         name,
         email,
@@ -48,7 +40,7 @@ module.exports.editDetails_post=async(req,res)=>{
         req.flash('error_msg', 'Unable to save the details')
         return res.redirect('/user/profile')
     }
-    // console.log('nominee',nominee)
+    console.log('nominee',nominee)
     
     req.user.nominee = nominee._id
     await user.save()
