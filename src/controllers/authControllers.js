@@ -270,7 +270,7 @@ module.exports.upload_post = async (req, res) => {
         // console.log(obj.document[0].filename)
         if(Object.keys(obj).length===0)
         {
-            req.flash('error_msg','Please select atleast one file to upload')
+            req.flash('error_msg','You may have not submitted any file or the file type may not be supported. Please try jpg,jpeg,pdf files')
             return res.redirect('/user/profile')
         }
         if(name==='')
@@ -351,7 +351,7 @@ module.exports.upload_post = async (req, res) => {
         // console.log('medicine',medicine)
         
         if (!newDisease) {
-            req.flash('error_msg', 'Unable to save the disease details')
+            req.flash('error_msg', 'Unable to save the disease details, Please check the file format. Supported file formats are:jpeg,jpg,png,gif,pdf')
             return res.redirect('/user/profile')
         }
         req.user.disease.push(newDisease)

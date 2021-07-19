@@ -13,4 +13,9 @@
 
 .alignment{
 	text-align: center;	
+  
+}
+
+.alert{
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem !important;
 }

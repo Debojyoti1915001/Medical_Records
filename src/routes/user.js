@@ -66,7 +66,9 @@ function checkFileType(file, cb) {
     if (mimetype && extname) {
         return cb(null, true)
     } else {
-        cb(null,false)
+        console.log("invalid file")
+        // req.flash("error_msg", "Enter a valid picture of format jpeg jpg png") 
+        return cb(null,false)
     }
 }
 function checkFileType1(file, cb) {
@@ -76,10 +78,13 @@ function checkFileType1(file, cb) {
     )
     const mimetype = filetypes.test(file.mimetype)
     if (mimetype && extname) {
+        // console.log("invalid file")
         return cb(null, true)
     } else {
-        cb(null,false)
+        // console.log("invalid file")
         // req.flash("error_msg", "Enter a valid picture of format jpeg jpg png") 
+        cb(null,false)
+        
     }
 }
 
