@@ -46,7 +46,7 @@ module.exports.document_get=async(req,res)=>{
     
     catch(e)
     {
-        console.log(e)
+        // console.log(e)
         res.redirect('/hospital/profile')
     }
 }
@@ -59,14 +59,14 @@ module.exports.editDetails_post=async(req,res)=>{
      hospital.adminEmail=req.body.adminEmail
      hospital.adminAddress=req.body.adminAddress
     await hospital.save()
-    console.log("user saved",hospital)
+    // console.log("user saved",hospital)
     req.flash('success_msg','Details about the user has been saved')
       
 
     res.redirect('/hospital/profile')
     }
     catch(e){
-        console.log("error",e)
+        // console.log("error",e)
         req.flash('error_msg','error while editing profile details')
         res.redirect('/hospital/profile')
     }
@@ -103,7 +103,7 @@ module.exports.patientDiseases_get=async(req,res)=>{
     
     catch(e)
     {
-        console.log(e)
+        // console.log(e)
         res.redirect('/hospital/profile')
     }
 }
@@ -196,7 +196,7 @@ module.exports.emailVerify_get = async (req, res) => {
             }
         })
     } catch (e) {
-        console.log(e)
+        // console.log(e)
         //signupMail(user,req.hostname,req.protocol)
         res.redirect('/hospital/login')
     }
@@ -241,7 +241,7 @@ module.exports.signup_post = async (req, res) => {
         res.redirect('/hospital/login')
     } catch (err) {
         const errors = handleErrors(err)
-        console.log(errors)
+        // console.log(errors)
 
         var message = 'Could not signup. '.concat((errors['email'] || ""), (errors['password'] || ""), (errors['phoneNumber'] || ""), (errors["licenseNumber"] || ""),  (errors["hospitalName"] || ""),)
         //res.json(errors);
@@ -321,7 +321,7 @@ module.exports.relation_post=async (req,res)=>{
     // console.log('userRels',user)
     if(!user)
     {
-        console.log('user not found')
+        // console.log('user not found')
         req.flash("error_msg", "User not found")
         res.redirect("/hospital/profile")
         return
@@ -341,7 +341,7 @@ module.exports.relation_post=async (req,res)=>{
         // console.log('relation already exists')
         if(existRelation.isPermitted)
         {
-            console.log('The user already exists',existRelation) //NEED TO IMPLEMENT SEARCH 
+            // console.log('The user already exists',existRelation) //NEED TO IMPLEMENT SEARCH 
             req.flash('error_msg','The user is already registered in your hospital')
             res.redirect('/hospital/profile')
         }
@@ -373,7 +373,7 @@ module.exports.relation_post=async (req,res)=>{
     }
     catch(e)
     {
-        console.log(e)
+        // console.log(e)
     }
 
 }
@@ -384,7 +384,7 @@ module.exports.relation_post=async (req,res)=>{
 module.exports.patient_search = async (req, res) => 
 {
     const {short_id} = req.body; 
-    console.log("Searched patient", req.body);
+    // console.log("Searched patient", req.body);
     if (!short_id || short_id.length < 8)
     {
         req.flash("error_msg", "Unique ID of user cannot be less than 8 characters")
@@ -420,7 +420,7 @@ module.exports.patient_search = async (req, res) =>
     }
     catch
     {
-     console.log("Internal error while searching for patient"); 
+    //  console.log("Internal error while searching for patient"); 
      req.flash('error_msg', 'Could not execute search operation')
      res.redirect("/hospital/profile"); 
     }
@@ -468,7 +468,7 @@ module.exports.relationVerify_get = async (req, res) => {
             }
         })
     } catch (e) {
-        console.log(e)
+        // console.log(e)
         //signupMail(user,req.hostname,req.protocol)
         res.redirect('/hospital/profile')
     }
@@ -546,7 +546,7 @@ module.exports.mail_to_nominee =   async (req,res)=>{
     }
     catch(e)
     {
-        console.log(e)
+        // console.log(e)
     }
 
 }
@@ -598,7 +598,7 @@ module.exports.nomineeVerify_get = async (req, res) => {
             }
         })
     } catch (e) {
-        console.log(e)
+        // console.log(e)
         //signupMail(user,req.hostname,req.protocol)
         res.redirect('/')
     }
